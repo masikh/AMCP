@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 This Class translates python calls to class functions into casparCP API calls.
 Its basically an interface between python and the AMCP telnet API.
 
-# Usage:
+# Developer usage:
 
 ### *- Copy AMCP.py file to  your source tree.
 
