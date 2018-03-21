@@ -96,7 +96,7 @@ class AMCP:
         sleep(0.1)
         self.amcp_channel.write("RESTART\r\n")
         amcp_session_close(self.amcp_session)
-        print "RESTART"
+        print(RESTART)
 
     def play(self):
         """
@@ -108,7 +108,7 @@ class AMCP:
             params = params + " " + param
 
         self.amcp_session.write("PLAY %s-%s %s%s\r\n" % (self.channel, self.layer, self.resource, params))
-        print "PLAY %s-%s %s%s" % (self.channel, self.layer, self.resource, params)
+        print("PLAY %s-%s %s%s" % (self.channel, self.layer, self.resource, params))
 
     def anchor(self, anchor):
         """
@@ -126,7 +126,7 @@ class AMCP:
                                                                    self.layer,
                                                                    anchor_x,
                                                                    anchor_y))
-        print "MIXER %s-%s ANCHOR %s %s" % (self.channel, self.layer, anchor_x, anchor_y)
+        print("MIXER %s-%s ANCHOR %s %s" % (self.channel, self.layer, anchor_x, anchor_y))
 
     def scale(self, geometry):
         """
@@ -141,12 +141,12 @@ class AMCP:
                                                                        geometry[1],
                                                                        geometry[2],
                                                                        geometry[3]))
-        print "MIXER %s-%s FILL %s %s %s %s" % (self.channel,
+        print("MIXER %s-%s FILL %s %s %s %s" % (self.channel,
                                                   self.layer,
                                                   geometry[0],
                                                   geometry[1],
                                                   geometry[2],
-                                                  geometry[3])
+                                                  geometry[3]))
 
     def volume(self, volume):
         """
@@ -155,7 +155,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("MIXER %s-%s VOLUME %s 25 easeinsine\r\n" % (self.channel, self.layer, volume))
-        print "MIXER %s-%s VOLUME %s 25 easeinsine" % (self.channel, self.layer, volume)
+        print("MIXER %s-%s VOLUME %s 25 easeinsine" % (self.channel, self.layer, volume))
 
     def sink(self, sink):
         """
@@ -164,7 +164,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("ADD %s STREAM %s\r\n" % (self.channel, sink))
-        print "ADD %s STREAM %s" % (self.channel, sink)
+        print("ADD %s STREAM %s" % (self.channel, sink))
 
     def stop(self):
         """
@@ -172,7 +172,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("STOP %s-%s\r\n" % (self.channel, self.layer))
-        print "STOP %s-%s" % (self.channel, self.layer)
+        print("STOP %s-%s" % (self.channel, self.layer))
 
     def clear(self):
         """
@@ -180,7 +180,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("CLEAR %s-%s\r\n" % (self.channel, self.layer))
-        print "CLEAR %s-%s" % (self.channel, self.layer)
+        print("CLEAR %s-%s" % (self.channel, self.layer))
 
     def mixer_clear(self):
         """
@@ -188,7 +188,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("MIXER %s-%s CLEAR\r\n" % (self.channel, self.layer))
-        print "MIXER %s-%s CLEAR" % (self.channel, self.layer)
+        print("MIXER %s-%s CLEAR" % (self.channel, self.layer))
 
     def rotate(self, angle):
         """
@@ -196,7 +196,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("MIXER %s-%s ROTATION %s\r\n" % (self.channel, self.layer, angle))
-        print "MIXER %s-%s ROTATION %s" % (self.channel, self.layer, angle)
+        print("MIXER %s-%s ROTATION %s" % (self.channel, self.layer, angle))
 
     def master_volume(self, volume):
         """
@@ -204,7 +204,7 @@ class AMCP:
         """
         sleep(0.1)
         self.amcp_session.write("MIXER %s MASTERVOLUME %s\r\n" % (self.channel, volume))
-        print "MIXER %s MASTERVOLUME %s" % (self.channel, volume)
+        print("MIXER %s MASTERVOLUME %s" % (self.channel, volume))
 
 
 def stop(amcp_channel_list):
