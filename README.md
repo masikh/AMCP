@@ -1,4 +1,6 @@
 # License
+
+[![Language](https://img.shields.io/github/languages/top/masikh/AMCP)](https://github.com/masikh/AMCP) [![Last commit](https://img.shields.io/github/last-commit/masikh/AMCP)](https://github.com/masikh/AMCP/commits) [![Repo size](https://img.shields.io/github/repo-size/masikh/AMCP)](https://github.com/masikh/AMCP) [![Stars](https://img.shields.io/github/stars/masikh/AMCP?style=flat)](https://github.com/masikh/AMCP/stargazers)
 Copyright (C) 2016 Robert Nagtegaal <masikh@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
